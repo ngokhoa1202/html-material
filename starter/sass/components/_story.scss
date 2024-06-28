@@ -1,0 +1,74 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3.2rem 4.8rem rgba($color-black, 0.2);
+  background-color: $color-gray-light-1;
+  border-radius: 1rem;
+  padding: 6.4rem;
+  /* pads left because of the shape specified below */
+  padding-left: 9.2rem;
+  font-size: $default-font-size;
+  transform: skewX(-7deg);
+  
+
+  &__shape {
+    /* must specify width and height to use shape outside */
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: skyblue;
+    /* specify how the text wraps the element => look at the text to see the change */
+    /* radius = 50% * 15rem => diameter = width = height, center at (50% * width, 50% * height)*/
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    /* change its visible shape */
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    /* skew back the img because transform only works once and if specified more than once => overwrite */
+    transform: translateX(-3.2rem) skewX(7deg);
+
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    // backface-visibility: hidden;
+    object-fit: cover;
+    transition: all 0.5s ease-in;
+  }
+  
+  /* skew back the text */
+  &__text {
+    transform: skewX(7deg);
+  }
+
+  &__caption {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* for linear animation effect */
+    transform: translate(-50%, 10%);
+    color: $color-white;
+    text-transform: uppercase;
+    /* hide it */
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    /* remove shaking effect */
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: scale(1.1);
+    /* blur and darken effect */
+    filter: blur(4px) brightness(80%);
+  }
+
+}

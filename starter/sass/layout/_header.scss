@@ -1,0 +1,30 @@
+.header {
+  height: 95vh;
+  background-image:
+    linear-gradient(to right bottom, rgba($color-primary-light, 0.7), rgba($color-primary-dark, 0.7)),
+    url("../img/hero.jpg");
+  background-size: cover;
+  /* which parts of background will be kept when resizing */
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 3.2rem;
+    left: 3.2rem;
+  }
+
+  &__logo {
+    height: 4rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

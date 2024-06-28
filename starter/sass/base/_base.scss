@@ -1,0 +1,20 @@
+/* better behaviour: adapt framwork's box-sizing */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+  /* allow inherit box-sizing property */
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*put font in body for inheritance*/
+body {
+  padding: 2.4rem;
+  box-sizing: border-box;
+}

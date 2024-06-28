@@ -1,0 +1,110 @@
+/* style anchor or button element */
+.btn {
+  padding: 1.2rem 2.4rem;
+
+  /* for button only  */
+  border: none;
+  
+  /* for anchor only */
+  &,
+  &:link,
+  &:visited {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    transition: all 0.5s ease-in;  
+  }
+
+  &:hover,
+  &:focus { /* focus is similar to hover */
+    transform: translate(0, -0.8rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+    cursor: pointer;
+    
+    &::after {
+      /* Create box shadow propagation effect */
+      /* only has after pseudo-element when being hoverred */
+      /* when btn::after fades out, it creates a transition effect */
+      transform: scaleX(1.5) scaleY(1.2);
+      opacity: 0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: translate(0, -0.4rem);
+  }
+
+  /* considered a child of btn */
+  /* element that creates animation effect */
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* always displayed behind btn */
+    transition: all 0.5s ease-in;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-gray-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    
+  
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 1s ease-in-out 1 0.5s;
+    /* applies style defined in 0% animation when animation starts */
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: $color-primary;
+    text-decoration: none;
+    border-bottom: 0.1rem solid $color-primary;
+    padding: 4px;
+    font-size: $default-font-size;
+    transition: all 0.5 ease-in;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1.2rem 2.4rem rgba($color-black, 0.1);
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: 0 0.8rem 1.6rem rgba($color-black, 0.1);
+    transform: translate(0, -0.4rem);
+  }
+}

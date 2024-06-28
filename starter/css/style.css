@@ -1,0 +1,680 @@
+/********COLORS************************ */
+/********GRID************************ */
+/********FONT************************ */
+/* better behaviour: adapt framwork's box-sizing */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+  /* allow inherit box-sizing property */
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+/*put font in body for inheritance*/
+body {
+  padding: 2.4rem;
+  box-sizing: border-box; }
+
+/* CSS Animation */
+@keyframes moveInLeft {
+  /* when animation starts */
+  0% {
+    opacity: 0;
+    transform: translate(-10rem, 0); }
+  80% {
+    transform: translate(10rem, 0); }
+  /* when animation ends */
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(5rem, 0); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translate(0, 2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #777;
+  line-height: 1.7; }
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff;
+  /* prevents animation from shaking */
+  backface-visibility: hidden;
+  margin-bottom: 4.8rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6.4rem;
+    font-weight: 600;
+    letter-spacing: 3.2rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    /* animation repeeats three times */
+    /* animation-iteration-count: 3;  */
+    animation-timing-function: ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 400;
+    letter-spacing: 1.6rem;
+    animation: moveInRight 2s ease-in-out 0.5s; }
+
+.heading-secondary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.4rem;
+  transition: all 0.2s ease-in; }
+  .heading-secondary:hover {
+    transform: skew(2deg, 5deg) scale(1.1);
+    text-shadow: 0.8rem 1.2rem 2.4rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3.2rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+/**************MARGIN BOTTOM *************** */
+.u-margin-bottom-smallest {
+  margin-bottom: 0.8rem !important; }
+
+.u-margin-bottom-smaller {
+  margin-bottom: 1.6rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 2.4rem !important; }
+
+.u-margin-bottom-small-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 5.6rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8.4rem !important; }
+
+/**************MARGIN TOP *************** */
+.u-margin-top-smallest {
+  margin-top: 0.8rem !important; }
+
+.u-margin-top-smaller {
+  margin-top: 1.6rem !important; }
+
+.u-margin-top-small {
+  margin-top: 2.4rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 5.6rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8.4rem !important; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #777;
+  line-height: 1.7; }
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff;
+  /* prevents animation from shaking */
+  backface-visibility: hidden;
+  margin-bottom: 4.8rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6.4rem;
+    font-weight: 600;
+    letter-spacing: 3.2rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    /* animation repeeats three times */
+    /* animation-iteration-count: 3;  */
+    animation-timing-function: ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 400;
+    letter-spacing: 1.6rem;
+    animation: moveInRight 2s ease-in-out 0.5s; }
+
+.heading-secondary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.4rem;
+  transition: all 0.2s ease-in; }
+  .heading-secondary:hover {
+    transform: skew(2deg, 5deg) scale(1.1);
+    text-shadow: 0.8rem 1.2rem 2.4rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3.2rem; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -15vh; }
+
+.section-features {
+  padding: 20rem 10rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("../img/nat-4.jpg");
+  background-size: cover;
+  /* which parts of background will be kept when being resized */
+  background-position: center;
+  transform: skewY(-7deg);
+  margin-top: -10rem; }
+  .section-features > .row {
+    transform: skewY(7deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 15rem 0 15rem 0; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: transparent;
+  /* for background video */
+  position: relative;
+  overflow: hidden; }
+
+.section-booking {
+  padding: 10rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+
+/* because booking is npt reusable in other pages */
+.booking {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../img/nat-10.jpg");
+  background-size: cover;
+  /* may use 100% alternatively */
+  height: 50rem;
+  border-radius: 1rem;
+  box-shadow: 0 3.2rem 4.8rem rgba(0, 0, 0, 0.3); }
+  .booking__form {
+    width: 50%;
+    padding: 6.4rem; }
+
+/* style anchor or button element */
+.btn {
+  padding: 1.2rem 2.4rem;
+  /* for button only  */
+  border: none;
+  /* for anchor only */
+  /* considered a child of btn */
+  /* element that creates animation effect */ }
+  .btn, .btn:link, .btn:visited {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    transition: all 0.5s ease-in; }
+  .btn:hover, .btn:focus {
+    /* focus is similar to hover */
+    transform: translate(0, -0.8rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
+    .btn:hover::after, .btn:focus::after {
+      /* Create box shadow propagation effect */
+      /* only has after pseudo-element when being hoverred */
+      /* when btn::after fades out, it creates a transition effect */
+      transform: scaleX(1.5) scaleY(1.2);
+      opacity: 0; }
+  .btn:focus {
+    outline: none; }
+  .btn:active {
+    transform: translate(0, -0.4rem); }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* always displayed behind btn */
+    transition: all 0.5s ease-in; }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #55c57a; }
+  .btn--animated {
+    animation: moveInBottom 1s ease-in-out 1 0.5s;
+    /* applies style defined in 0% animation when animation starts */
+    animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  color: #55c57a;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #55c57a;
+  padding: 4px;
+  font-size: 1.6rem;
+  transition: all 0.5 ease-in; }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+  cursor: pointer; }
+
+.btn-text:active {
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1);
+  transform: translate(0, -0.4rem); }
+
+.composition {
+  position: relative;
+  /* when composition is being hoverred but only select the photos not being hoverred   */ }
+  .composition__photo {
+    width: 60%;
+    box-shadow: 0 1.2rem 4.8rem rgba(0, 0, 0, 0.4);
+    /* use absolute position to easily specify their arbitary position */
+    position: absolute;
+    border-radius: 1rem;
+    z-index: 1;
+    transition: all 0.2s ease-in;
+    /* style each photo a distinct position */
+    /* style each photo a distinct position */
+    /* style each photo a distinct position */ }
+    .composition__photo--p1 {
+      top: -1rem;
+      left: 0; }
+    .composition__photo--p2 {
+      top: 4rem;
+      right: -8rem; }
+    .composition__photo--p3 {
+      top: 12rem;
+      left: 8rem; }
+    .composition__photo:hover {
+      transform: scale(1.1) translate(0, -1.6rem);
+      box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      outline: 1.2rem solid #55c57a;
+      outline-offset: 1.6rem; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 1.2rem 4.8rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in; }
+  .feature-box:hover {
+    transform: translate(0, -3.6rem) scale(1.1, 1.1);
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.4); }
+  .feature-box__icon {
+    font-size: 5.6rem;
+    background-image: linear-gradient(to bottom, #28b485, #7ed56f);
+    background-clip: text;
+    color: transparent; }
+  .feature-box__text {
+    font-size: 1.6rem; }
+
+.card {
+  /* make as if the card is moving towards users */
+  /* specify perspective property in parent element */
+  /* use a huge number of pxs */
+  perspective: 100rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  /* in abosulute position must specify its height */
+  height: 52rem;
+  /* select the front side when the card is being hoverred => rotate it */
+  /* hover back to the front side */
+  /* STYLE BACK SIDE */ }
+  .card__side {
+    height: 52rem;
+    transition: all 1s ease-in;
+    /* make two sides overlap each other */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* must explicitly specify width */
+    width: 100%;
+    /* hide the back part of the animation effect */
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    /* hide overflow parts */
+    overflow: hidden;
+    box-shadow: 0 2.4rem 3.2rem rgba(0, 0, 0, 0.3); }
+    .card__side--front {
+      background-color: #fff; }
+    .card__side--back {
+      /* back side always stays behind front side by default */
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back--2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back--3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    /* must specify height */
+    height: 25rem;
+    /* Blend the two background images */
+    /* Not compatible with all browser: e.g Internet explorer */
+    background-blend-mode: screen; }
+    .card__picture--p1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg");
+      /* After preprocessing, url is translated to css file style.css */
+      background-position: center;
+      /* clip-path may be not compatible with Edge browser */
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card__picture--p2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg");
+      background-position: center;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card__picture--p3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg");
+      background-position: center;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  .card__heading {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    /* specify text-align in the parent element */
+    text-align: right;
+    position: absolute;
+    top: 13rem;
+    /* decrease its width until heading is close to the right side of the box */
+    width: 60%;
+    right: 2rem; }
+  .card__heading-span {
+    color: #fff;
+    /* Add padding to make it like a block */
+    padding: 1.2rem 1.8rem;
+    /* make the text spanning in the two lines looks like a united block */
+    /* if not specified, it looks the two separate blocks */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span--s1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+    .card__heading-span--s2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+    .card__heading-span--s3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card__details {
+    text-align: center;
+    padding: 2.4rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        font-size: 1.6rem;
+        padding: 0.8rem 2.4rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 2px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fff; }
+  .card__price--only {
+    font-size: 1.6rem;
+    text-transform: uppercase; }
+  .card__price--value {
+    font-size: 6.4rem;
+    font-weight: 700; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3.2rem 4.8rem rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7;
+  border-radius: 1rem;
+  padding: 6.4rem;
+  /* pads left because of the shape specified below */
+  padding-left: 9.2rem;
+  font-size: 1.6rem;
+  transform: skewX(-7deg);
+  /* skew back the text */ }
+  .story__shape {
+    /* must specify width and height to use shape outside */
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    background-color: skyblue;
+    /* specify how the text wraps the element => look at the text to see the change */
+    /* radius = 50% * 15rem => diameter = width = height, center at (50% * width, 50% * height)*/
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    /* change its visible shape */
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    /* skew back the img because transform only works once and if specified more than once => overwrite */
+    transform: translateX(-3.2rem) skewX(7deg);
+    position: relative; }
+  .story__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in; }
+  .story__text {
+    transform: skewX(7deg); }
+  .story__caption {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* for linear animation effect */
+    transform: translate(-50%, 10%);
+    color: #fff;
+    text-transform: uppercase;
+    /* hide it */
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    /* remove shaking effect */
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: scale(1.1);
+    /* blur and darken effect */
+    filter: blur(4px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* always behind content */
+  z-index: -1000;
+  opacity: 0.15; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    /* maintain aspect ratio when fitting parent */
+    object-fit: cover; }
+
+.form {
+  /* ajacent selector => select the first following adjacent sibling */
+  /* remove radio input from layout by default by keep its checked state */ }
+  .form__group:not(:last-child) {
+    margin-bottom: 1.8rem; }
+  .form__input {
+    font-size: 1.8rem;
+    padding: 1.2rem 2.4rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: inherit;
+    border: 4px solid transparent;
+    width: 80%;
+    display: block; }
+    .form__input::-webkit-input-placeholder, .form__input::-moz-placeholder, .form__input:-ms-input-placeholder, .form__input:-moz-placeholder, .form__input::placeholder {
+      color: #999; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+      border-bottom: 4px solid #55c57a; }
+    .form__input:focus:invalid {
+      /* user enter wrong input for HTML validator */
+      border-bottom: 4px solid red; }
+  .form__label {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    /* move it down by default to create moving up effect */
+    margin-top: 0.8rem;
+    display: block;
+    transition: all 0.5s ease-in; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-3.6rem); }
+  .form__radio-group {
+    display: inline-block;
+    width: 49%; }
+  .form__radio-input {
+    display: none; }
+  .form__radio-input:checked + .form__radio-label > .form__radio-btn::after {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; }
+  .form__radio-label {
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 0 4rem;
+    position: relative; }
+  .form__radio-btn {
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-top: -4px;
+    border-radius: 50%;
+    border: 4px solid #55c57a;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .form__radio-btn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      height: 1.2rem;
+      width: 1.2rem;
+      border-radius: 50%;
+      background-color: #55c57a;
+      /* hide by default */
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url("../img/hero.jpg");
+  background-size: cover;
+  /* which parts of background will be kept when resizing */
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 3.2rem;
+    left: 3.2rem; }
+  .header__logo {
+    height: 4rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.row {
+  max-width: 128rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col"] {
+    float: left; }
+    .row [class^="col"]:not(:last-child) {
+      margin-right: 4.8rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 4.8rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 4.8rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 4.8rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc(100% - 4.8rem - ((100% - 2 * 4.8rem) / 3)); }
+  .row .col-2-of-4 {
+    width: calc(100% - 2 * (100% - 3 * 4.8rem) / 4 - 2 * 4.8rem); }
+  .row .col-3-of-4 {
+    width: calc(100% - (100% - 3 * 4.8rem) / 4 - 4.8rem); }
